@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Ali Kassab | Software Engineer &amp; Back-end Developer</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/modern.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,185 +22,851 @@
     />
   </head>
   <body class="main-content">
+    <!-- ===================== HEADER SECTION ===================== -->
     <header class="container header active" id="home">
-      <div class="header-content">
-        <div class="left-header">
-          <div class="h-shape"></div>
-          <div class="image">
-            <img src="./img/mypic.png" alt="pic" />
-          </div>
-        </div>
-        <div class="right-header">
-          <h1 class="name">
-            Hi, I'm <br />
-            <span>Ali kassab</span><br />
-            Front-End Web Developer.
-          </h1>
-          <p>
-            I'm a Web Developer,<br />
-            React Js
-          </p>
-          <div class="btn-con">
-                    <a download="alikassab cv" href="./cvfrontend.pdf" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                    
-                </div>
-        </div>
+      <!-- Atmospheric Cyber Background (JS canvas connects here) -->
+      <canvas id="matrixBG" class="cyber-matrix-bg"></canvas>
+      <div class="code-bg-overlay" id="codeOverlay"></div>
+
+      <div class="header-content cyber-home">
+         <!-- Vortex Container -->
+         <div class="vortex-container">
+            <!-- Center Profile Containment Field -->
+            <div class="hexagon-profile-wrap">
+               <div class="hex-border hex-outer"></div>
+               <div class="hex-border hex-inner"></div>
+               <div class="hex-image">
+                  <img src="./img/mypic.jpeg" alt="Ali Kassab" />
+               </div>
+            </div>
+
+            <!-- Orbiting Tech Navigation -->
+            <div class="orbiting-tech">
+               <!-- --angle defines where in the 360 circle it orbits computationally -->
+               <div class="tech-orb orb-1" data-code="class Main { public static void main(String[] args) {} }" style="--angle: 0deg"><i class="fab fa-java"></i></div>
+               <div class="tech-orb orb-2" data-code="app.listen(3000, () => console.log('Server running...'))" style="--angle: 60deg"><i class="fab fa-node-js"></i></div>
+               <div class="tech-orb orb-3" data-code="@SpringBootApplication public class App {}" style="--angle: 120deg"><i class="fas fa-leaf"></i></div>
+               <div class="tech-orb orb-4" data-code="SELECT * FROM multitenant_arch WHERE scalable='true';" style="--angle: 180deg"><i class="fas fa-database"></i></div>
+               <div class="tech-orb orb-5" data-code="aws ec2 run-instances --image-id ami-0abcdef123" style="--angle: 240deg"><i class="fab fa-aws"></i></div>
+               <div class="tech-orb orb-6" data-code="docker run -d -p 80:80 tech-container" style="--angle: 300deg"><i class="fab fa-docker"></i></div>
+            </div>
+         </div>
+
+         <!-- Text Content Area -->
+         <div class="cyber-text-box">
+             <div class="header-badge neon-badge">🚀 SYSTEM ONLINE</div>
+             <h1 class="shimmer-name">Ali Kassab</h1>
+             <h2 class="sub-name neon-title">Software Engineer</h2>
+
+             <div class="btn-con cyber-actions">
+                <button class="liquid-btn" onclick="document.querySelector('.control[data-id=\'contact\']').click()">
+                    <span>Let's Talk</span>
+                    <div class="liquid-wave"></div>
+                </button>
+                <a download="Ali-Kassab-CV" href="./Ali Kassab Software Engineer.pdf" class="cyber-ghost-btn">
+                    <span>Download CV</span>
+                    <span class="perimeter-border"></span>
+                </a>
+             </div>
+         </div>
       </div>
     </header>
     <main>
+      <!-- ===================== ABOUT SECTION ===================== -->
       <section class="container about" id="about">
         <div class="main-title">
-          <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+          <h2>About <span>me</span><span class="bg-text">about me</span></h2>
         </div>
         <div class="about-container">
-          <div class="left-about">
-            <h4>Information About me</h4>
-            <p>
-              A passionate frontend developer specializing in React.js. I have
-              honed my skills in creating engaging and user-friendly web
-              applications. I thrive in transforming ideas and designs into
-              intuitive and interactive interfaces that provide seamless user
-              experiences. My strong command over React.js allows me to build
-              robust and scalable applications, leveraging its powerful
-              component-based architecture and virtual DOM. I am well-versed in
-              modern web technologies such as HTML5, CSS3, and JavaScript, and I
-              stay up-to-date with the latest frontend trends and best
-              practices. As a detail-oriented professional, I pay great
-              attention to UI/UX design principles, ensuring that every pixel is
-              in its rightful place. Collaborating with cross-functional teams
-              and employing effective communication skills, I enjoy taking
-              projects from concept to completion, consistently delivering
-              high-quality code that meets both functional and aesthetic
-              requirements. I am excited about creating innovative solutions and
-              contributing to the ever-evolving field of frontend development
-              using React.js."
-            </p>
+          <div class="about-intro">
+            <article class="about-intro__card">
+              <header class="about-intro__head">
+                <div class="about-intro__head-label">
+                  <span class="about-intro__mark" aria-hidden="true"></span>
+                  <span class="about-intro__eyebrow">About me</span>
+                </div>
+                <h3 class="about-intro__title">
+                  Software engineer building backends that scale
+                </h3>
+              </header>
+              <div class="about-intro__copy">
+              <p>
+                I am a Software Engineer and Backend Developer based in Egypt,
+                specializing in robust, scalable, and production-ready systems. With a
+                strong foundation in Java, Spring Boot, and Node.js, I focus on Clean
+                Architecture, SOLID principles, and layered backend design.
+              </p>
+              <p>
+                Currently I work at DevGlobal LLC, where I build multi-tenant SaaS
+                platforms, modular REST APIs, and security layers including JWT and
+                RBAC. I care about reliability, clean codebases, and high-availability
+                outcomes. My stack also includes MongoDB, MSSQL, MySQL, and DevOps
+                tooling such as Docker and AWS.
+              </p>
+              </div>
+            </article>
+            <ul class="about-intro__facts" aria-label="Quick facts">
+              <li>
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span>Giza, Egypt</span>
+              </li>
+              <li>
+                <i class="fas fa-building" aria-hidden="true"></i>
+                <span>DevGlobal LLC</span>
+              </li>
+              <li>
+                <i class="fas fa-layer-group" aria-hidden="true"></i>
+                <span>Java · Spring · Node.js</span>
+              </li>
+              <li>
+                <i class="fas fa-cloud" aria-hidden="true"></i>
+                <span>AWS · Docker</span>
+              </li>
+            </ul>
           </div>
         </div>
+        <!-- ===================== SKILLS SECTION ===================== -->
         <div class="about-stats">
-          <h4 class="stat-title">My Skills</h4>
-          <div class="progress-bars">
-            <div class="progress-bar">
-              <p class="prog-title">html5</p>
-              <div class="progress-con">
-                <p class="prog-text">80%</p>
-                <div class="progress">
-                  <span class="html"></span>
-                </div>
+          <div class="main-title">
+            <h2>My <span>stats</span><span class="bg-text">my skills</span></h2>
+          </div>
+          <div class="skills-showcase">
+            <div class="skill-group">
+              <h5 class="skill-group-title">
+                <i class="fas fa-code" aria-hidden="true"></i> Languages
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">JavaScript (ES6+)</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">C#</span>
+                <span class="skill-pill">Python</span>
               </div>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">css3</p>
-              <div class="progress-con">
-                <p class="prog-text">95%</p>
-                <div class="progress">
-                  <span class="css"></span>
-                </div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">
+                <i class="fas fa-server" aria-hidden="true"></i> Backend &amp; frameworks
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">Spring Boot</span>
+                <span class="skill-pill">Spring Security</span>
+                <span class="skill-pill">Spring Data JPA</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Express.js</span>
+                <span class="skill-pill">NestJS</span>
+                <span class="skill-pill">REST APIs</span>
+                <span class="skill-pill">Microservices</span>
+                <span class="skill-pill">Multi-tenant systems</span>
               </div>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">bootstrap</p>
-              <div class="progress-con">
-                <p class="prog-text">90%</p>
-                <div class="progress">
-                  <span class="css"></span>
-                </div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i> Security &amp; auth
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">JWT</span>
+                <span class="skill-pill">OAuth 2.0</span>
+                <span class="skill-pill">RBAC</span>
+                <span class="skill-pill">Auth0</span>
               </div>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">javascript</p>
-              <div class="progress-con">
-                <p class="prog-text">75%</p>
-                <div class="progress">
-                  <span class="js"></span>
-                </div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">
+                <i class="fas fa-database" aria-hidden="true"></i> Databases &amp; ORM
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">SQL Server</span>
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">Redis</span>
+                <span class="skill-pill">Hibernate (JPA)</span>
               </div>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">jQuery</p>
-              <div class="progress-con">
-                <p class="prog-text">80%</p>
-                <div class="progress">
-                  <span class="js"></span>
-                </div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">
+                <i class="fas fa-cloud" aria-hidden="true"></i> Cloud &amp; tools
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">AWS</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Kubernetes</span>
+                <span class="skill-pill">CI/CD</span>
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub Actions</span>
+                <span class="skill-pill">Stripe API</span>
+                <span class="skill-pill">Twilio</span>
+                <span class="skill-pill">Socket.io</span>
+                <span class="skill-pill">SSE</span>
+                <span class="skill-pill">Swagger (OpenAPI)</span>
+                <span class="skill-pill">Postman</span>
               </div>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">ReactJS</p>
-              <div class="progress-con">
-                <p class="prog-text">75%</p>
-                <div class="progress">
-                  <span class="react"></span>
-                </div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">
+                <i class="fas fa-layer-group" aria-hidden="true"></i> Frontend
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Next.js</span>
+                <span class="skill-pill">Tailwind CSS</span>
+                <span class="skill-pill">Bootstrap</span>
+                <span class="skill-pill">Material UI (MUI)</span>
+              </div>
+            </div>
+            <div class="skill-group skill-group--wide">
+              <h5 class="skill-group-title">
+                <i class="fas fa-project-diagram" aria-hidden="true"></i> Software engineering
+              </h5>
+              <div class="skill-pills">
+                <span class="skill-pill">SOLID principles</span>
+                <span class="skill-pill">Design patterns</span>
+                <span class="skill-pill">Algorithms</span>
+                <span class="skill-pill">Data structures</span>
+                <span class="skill-pill">OOP</span>
+                <span class="skill-pill">Unit testing (JUnit)</span>
+                <span class="skill-pill">Technical documentation</span>
+                <span class="skill-pill">Problem-solving</span>
+                <span class="skill-pill">Team collaboration</span>
+                <span class="skill-pill">Mentoring</span>
+                <span class="skill-pill">Code reviews</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
+      <!-- ===================== PORTFOLIO SECTION ===================== -->
       <section class="container" id="portfolio">
+        <div class="portfolio-employer-block">
+          <div class="main-title main-title--employer">
+            <h2>
+              DEV <span>GLOBAL</span><span class="bg-text">Employer</span>
+            </h2>
+          </div>
+          <aside class="portfolio-confidential-notice" role="note">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            <div>
+              <strong>Confidential work — no public links</strong>
+              <p>
+                The initiatives below were delivered as a software engineer at
+                DevGlobal LLC. Repositories, staging URLs, and client names are
+                protected by company policy and confidentiality agreements.
+                Descriptions are high-level for recruiters and hiring managers;
+                I can discuss architecture and impact in a private conversation.
+              </p>
+            </div>
+          </aside>
+          <div class="portfolios" role="list">
+            <article
+              class="project-card project-card--confidential"
+              role="listitem"
+            >
+              <div
+                class="project-card__media project-card__media--placeholder project-card__media--accent-api"
+              >
+                <i class="fas fa-building" aria-hidden="true"></i>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span class="project-card__badge project-card__badge--backend"
+                    >Multi-tenant SaaS</span
+                  >
+                  <span class="project-card__date"
+                    ><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul
+                    2024 – present</span
+                  >
+                </div>
+                <h3 class="project-card__title">
+                  Tenant-isolated cloud platform
+                </h3>
+                <p class="project-card__desc">
+                  Architected and extended a multi-tenant SaaS backend serving a
+                  large base of isolated customer environments, with emphasis on
+                  uptime, data boundaries, and predictable performance as tenant
+                  count grew.
+                </p>
+                <ul class="project-card__highlights">
+                  <li>
+                    Node.js and Express services with strict tenant data
+                    isolation patterns
+                  </li>
+                  <li>
+                    Modular REST surface (50+ endpoints) with structured
+                    collections and docs
+                  </li>
+                  <li>
+                    Operational outcomes aligned with high availability targets
+                  </li>
+                </ul>
+                <ul class="project-card__stack" aria-label="Technologies">
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>REST</li>
+                  <li>Multi-tenancy</li>
+                  <li>Postman</li>
+                </ul>
+                <p class="project-card__private-note">
+                  No source or demo links — employer confidential. Happy to walk
+                  through design trade-offs in an interview.
+                </p>
+              </div>
+            </article>
+            <article
+              class="project-card project-card--confidential"
+              role="listitem"
+            >
+              <div
+                class="project-card__media project-card__media--placeholder project-card__media--accent-live"
+              >
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span class="project-card__badge project-card__badge--backend"
+                    >Security &amp; billing</span
+                  >
+                  <span class="project-card__date"
+                    ><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul
+                    2024 – present</span
+                  >
+                </div>
+                <h3 class="project-card__title">
+                  Auth, payments &amp; real-time delivery
+                </h3>
+                <p class="project-card__desc">
+                  Hardened access across services with JWT and role-based
+                  control, integrated Stripe for automated billing workflows,
+                  and shipped real-time user experiences using Socket.io,
+                  server-sent events, and external webhooks.
+                </p>
+                <ul class="project-card__highlights">
+                  <li>
+                    JWT with RBAC applied consistently across microservice-style
+                    boundaries
+                  </li>
+                  <li>
+                    Stripe-driven billing to reduce manual payment handling
+                  </li>
+                  <li>
+                    Live notifications via Socket.io, SSE, and Twilio webhooks
+                  </li>
+                </ul>
+                <ul class="project-card__stack" aria-label="Technologies">
+                  <li>JWT</li>
+                  <li>RBAC</li>
+                  <li>Stripe</li>
+                  <li>Socket.io</li>
+                  <li>SSE</li>
+                  <li>Twilio</li>
+                </ul>
+                <p class="project-card__private-note">
+                  Proprietary integrations and keys are not shareable. I can
+                  explain flows and security considerations privately.
+                </p>
+              </div>
+            </article>
+            <article
+              class="project-card project-card--confidential"
+              role="listitem"
+            >
+              <div
+                class="project-card__media project-card__media--placeholder project-card__media--accent-jobs"
+              >
+                <i class="fas fa-tasks" aria-hidden="true"></i>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span
+                    class="project-card__badge project-card__badge--fullstack"
+                    >Internal platforms</span
+                  >
+                  <span class="project-card__date"
+                    ><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul
+                    2024 – present</span
+                  >
+                </div>
+                <h3 class="project-card__title">
+                  Scheduling, ops &amp; workflow tooling
+                </h3>
+                <p class="project-card__desc">
+                  Built internal product experiences including a Jira-style task
+                  platform with cron-driven background work, plus customer
+                  scheduling automation that increased daily operational
+                  capacity for field-service style operations.
+                </p>
+                <ul class="project-card__highlights">
+                  <li>
+                    Cron-based jobs for recurring and deferred backend work
+                  </li>
+                  <li>Task-tracking UX modeled after familiar PM tools</li>
+                  <li>
+                    Scheduling workflows tuned for real-world operations teams
+                  </li>
+                </ul>
+                <ul class="project-card__stack" aria-label="Technologies">
+                  <li>Node.js</li>
+                  <li>Cron</li>
+                  <li>REST</li>
+                  <li>Workflow design</li>
+                </ul>
+                <p class="project-card__private-note">
+                  Client-specific features and deployments remain private. Scope
+                  and metrics can be discussed under NDA.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
         <div class="main-title">
-          <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+          <h2>
+            Freelance <span>and self projects</span
+            ><span class="bg-text">Public</span>
+          </h2>
         </div>
         <p class="port-text">
-          Here is some of my work that I've done in various programming
-          languages.
+          Personal and freelance builds you can inspect on
+          <a
+            href="https://github.com/ali-kassab"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          and
+          <a
+            href="https://www.linkedin.com/in/ali-kassab-8428161b8"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >. Backend and API work is listed first; React and JavaScript UI
+          projects follow.
         </p>
 
-        <div class="portfolios">
-          <div class="portfolio-item">
-            <div class="image">
-              <img src="img/solostor.PNG" alt="" />
+        <div class="portfolios" role="list">
+          <article class="project-card" role="listitem">
+            <div
+              class="project-card__media project-card__media--placeholder project-card__media--accent-api"
+            >
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
             </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href=" https://github.com/ali-kassab/Solo-Store." class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://solo-store.vercel.app/" class="icon">
-                  <i  class="fa-solid fa-caret-up"></i></fa-solid>
-                </a>
-                
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--backend"
+                  >Backend · API</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i> Mar
+                  2024</span
+                >
+              </div>
+              <h3 class="project-card__title">E-commerce backend (personal)</h3>
+              <p class="project-card__desc">
+                A self-directed Node.js API that mirrors production concerns:
+                product catalog, admin dashboard, checkout, and cash plus card
+                payments through Stripe. Separate from employer systems—built to
+                practice GraphQL and REST together, strict validation, and
+                secure handling of uploads and user data.
+              </p>
+              <ul class="project-card__highlights">
+                <li>
+                  GraphQL alongside REST-style Express handlers where
+                  appropriate
+                </li>
+                <li>
+                  JWT auth, Joi validation, bcrypt, Multer &amp; Slugify
+                  utilities
+                </li>
+                <li>
+                  Deliberate focus on security posture and clean module
+                  boundaries
+                </li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>GraphQL</li>
+                <li>Stripe</li>
+                <li>JWT</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/e-commerce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
               </div>
             </div>
-          </div>
-          <div class="portfolio-item">
-            <div class="image">
-              <img src="img/clinc.PNG" alt="" />
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div
+              class="project-card__media project-card__media--placeholder project-card__media--accent-jobs"
+            >
+              <i class="fas fa-briefcase" aria-hidden="true"></i>
             </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="https://github.com/ali-kassab/Clinic." class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://clinic-sage.vercel.app/" class="icon">
-                  <i class="fa-solid fa-caret-up"></i>
-                </a>
-           
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--backend"
+                  >Backend · Jobs</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i> Feb
+                  2024</span
+                >
+              </div>
+              <h3 class="project-card__title">Wuzzuf-style job board API</h3>
+              <p class="project-card__desc">
+                Backend for a job marketplace: companies publish roles,
+                candidates apply with résumé uploads, and the system enforces
+                authentication and authorization across multi-role flows—similar
+                in spirit to regional job-board products.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Employer vs applicant flows with guarded routes</li>
+                <li>CV uploads via Multer with sensible validation</li>
+                <li>
+                  MongoDB models organized around hiring-domain boundaries
+                </li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Multer</li>
+                <li>Auth</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/wuzzuf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
               </div>
             </div>
-          </div>
-          <div class="portfolio-item">
-            <div class="image">
-              <img src="img/changColor.PNG" alt="" />
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div
+              class="project-card__media project-card__media--placeholder project-card__media--accent-live"
+            >
+              <i class="fas fa-bolt" aria-hidden="true"></i>
             </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="https://github.com/ali-kassab/change-colors" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://change-colors-eta.vercel.app/" class="icon">
-                  <i class="fa-solid fa-caret-up"></i>
-                </a>
-           
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--fullstack"
+                  >Full-stack · Real-time</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i> Jan
+                  2024</span
+                >
+              </div>
+              <h3 class="project-card__title">CRUD + Socket.IO</h3>
+              <p class="project-card__desc">
+                Small full-stack app demonstrating live updates: create, read,
+                update, delete, and search while Socket.IO keeps connected
+                clients in sync—great for learning event-driven UI patterns.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Real-time list refresh without manual polling</li>
+                <li>Mongoose models with Express API surface</li>
+                <li>Minimal UI focused on data flow and sockets</li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>Socket.IO</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Mongoose</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/crud-socket.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
               </div>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div
+              class="project-card__media project-card__media--placeholder project-card__media--accent-java"
+            >
+              <i class="fab fa-java" aria-hidden="true"></i>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--backend"
+                  >Java · Spring</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  Freelance</span
+                >
+              </div>
+              <h3 class="project-card__title">True Social — Spring Boot API</h3>
+              <p class="project-card__desc">
+                Backend-focused delivery for a social-style product: secure REST
+                APIs built with Spring Boot, Spring Security, and JWT
+                issuance—aligned with how I describe similar stacks on my resume
+                for client-ready, policy-driven access control.
+              </p>
+              <ul class="project-card__highlights">
+                <li>
+                  Spring Security pipeline tuned for token-based authentication
+                </li>
+                <li>
+                  Clear REST resource modeling and validation at the boundary
+                </li>
+                <li>
+                  Foundation for extending roles and permissions over time
+                </li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Spring Security</li>
+                <li>JWT</li>
+                <li>REST</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/True-Social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div
+              class="project-card__media project-card__media--placeholder project-card__media--accent-java"
+            >
+              <i class="fas fa-heartbeat" aria-hidden="true"></i>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--fullstack"
+                  >Java · MVC</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  Freelance</span
+                >
+              </div>
+              <h3 class="project-card__title">
+                Vet Connect — clinic management (MVC)
+              </h3>
+              <p class="project-card__desc">
+                Clinic management system emphasizing safe role separation:
+                staff, vets, and administrators see only what their role allows.
+                Server-side MVC with forms, persistence, and guardrails around
+                sensitive operational data.
+              </p>
+              <ul class="project-card__highlights">
+                <li>
+                  RBAC-style access layered into MVC controllers and views
+                </li>
+                <li>
+                  Domain modeling around appointments, patients, and clinic
+                  operations
+                </li>
+                <li>
+                  Patterns suitable for regulated, trust-sensitive environments
+                </li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>Java</li>
+                <li>Spring MVC</li>
+                <li>Security / RBAC</li>
+                <li>JPA / Hibernate</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/Vet_MVC_App"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div class="project-card__media">
+              <img
+                src="img/solostor.PNG"
+                alt="Solo Store e-commerce storefront screenshot"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--frontend"
+                  >Frontend · React</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  May–Jun 2023</span
+                >
+              </div>
+              <h3 class="project-card__title">E-commerce storefront (React)</h3>
+              <p class="project-card__desc">
+                Consumer-facing shop powered by remote APIs: product grids,
+                detail pages, price filters, auth screens, and a persistent
+                cart—built to behave well on phones, tablets, and desktops.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Token-aware flows with protected routes</li>
+                <li>Cart and catalog state tied to backend contracts</li>
+                <li>Responsive layout tuned for real devices</li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>React</li>
+                <li>REST APIs</li>
+                <li>React Router</li>
+                <li>Axios</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/store-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
+                <a
+                  class="project-card__btn project-card__btn--ghost"
+                  href="https://solo-store.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live demo
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div class="project-card__media">
+              <img
+                src="img/clinc.PNG"
+                alt="Clinic website screenshot"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--frontend"
+                  >Frontend · React</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  Apr–May 2023</span
+                >
+              </div>
+              <h3 class="project-card__title">Clinic marketing site</h3>
+              <p class="project-card__desc">
+                Informational site for a medical clinic: doctor profiles,
+                services, and clear contact paths—structured so visitors can
+                scan quickly and reach the right provider.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Per-doctor detail views with consistent branding</li>
+                <li>Responsive typography and spacing for readability</li>
+                <li>Lightweight, fast-loading static experience</li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>React</li>
+                <li>Responsive CSS</li>
+                <li>UI components</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/Clinic."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
+                <a
+                  class="project-card__btn project-card__btn--ghost"
+                  href="https://clinic-sage.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live demo
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem">
+            <div class="project-card__media">
+              <img
+                src="img/changColor.PNG"
+                alt="Photo filter web app screenshot"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--frontend"
+                  >Frontend · Canvas</span
+                >
+                <span class="project-card__date"
+                  ><i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  Mar–Apr 2023</span
+                >
+              </div>
+              <h3 class="project-card__title">Photo editor in the browser</h3>
+              <p class="project-card__desc">
+                Vanilla JavaScript image lab: upload a photo, apply creative
+                filters and lighting tweaks, preview instantly, then download
+                the result—all without leaving the page.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Client-side filters for fast iteration</li>
+                <li>Upload / preview / export loop with clear UX</li>
+                <li>Fully responsive controls for mobile and desktop</li>
+              </ul>
+              <ul class="project-card__stack" aria-label="Technologies">
+                <li>JavaScript</li>
+                <li>Canvas</li>
+                <li>CSS</li>
+              </ul>
+              <div class="project-card__actions">
+                <a
+                  class="project-card__btn"
+                  href="https://github.com/ali-kassab/change-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
+                <a
+                  class="project-card__btn project-card__btn--ghost"
+                  href="https://change-colors-eta.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live demo
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
       
@@ -209,86 +876,112 @@
           <div class="main-title">
             <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
           </div>
-          <div class="contact-content-con">
-            <div class="left-contact">
-              <h4>Contact me here</h4>
-         
-              <div class="contact-info">
-               
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                  </div>
-                  <p>
-                    <span>: alikassab155@gmail.com</span>
-                  </p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-user-graduate"></i>
-                    <span>Education</span>
-                  </div>
-                  <p>
-                    <span>: Sohag University</span>
-                  </p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-user-graduate"></i>
-                    <span>Mobile Number</span>
-                  </div>
-                  <p>
-                    <span>: 01010044102</span>
-                  </p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-globe-africa"></i>
-                    <span>Languages</span>
-                  </div>
-                  <p>
-                    <span>: English </span>
-                  </p>
-                </div>
-              </div>
-              <div class="contact-icons">
-                <div class="contact-icon">
-                  <a href="https://www.facebook.com/ali.kassab.188478/" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href=" https://twitter.com/alykassab7" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href=" https://github.com/ali-kassab" target="_blank">
-                    <i class="fab fa-github"></i>
-                  </a>
-              
-                </div>
-              </div>
-            </div>
-       
+          <div class="modern-contact-wrapper">
+             <div class="contact-left-col">
+                <h3 class="contact-headline">Let's build something extraordinary</h3>
+                <p class="contact-subhead">Whether you have a specific project in mind or just want to say hi, I'm always open to new opportunities and connections.</p>
+                
+                <div class="contact-personal-chips">
+                   <div class="info-chip">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Giza, Egypt</span>
+                   </div>
+                   <div class="info-chip">
+                      <i class="fas fa-phone-alt"></i>
+                      <span>+20 1010044102</span>
+                   </div>
+                   <div class="info-chip">
+                       <i class="fas fa-graduation-cap"></i>
+                       <span>Sohag University</span>
+                   </div>
+               </div>
+
+
+             </div>
+
+             <div class="contact-right-col">
+                 <div class="interact-cards-container">
+<a href="mailto:alikassab155@gmail.com" class="interact-card interact-card--email">
+    <div class="ic-icon">
+        <i class="fas fa-paper-plane"></i>
+    </div>
+    
+    <div class="ic-content">
+        <h4>Email Me</h4>
+        <p>alikassab155@gmail.com</p>
+    </div>
+
+    <div class="ic-action">
+        <i class="fas fa-envelope"></i>
+    </div>
+    
+    <div class="glow-effect"></div>
+</a>
+
+                    <a href="https://wa.me/201010044102" target="_blank" class="interact-card interact-card--whatsapp">
+                        <div class="ic-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="ic-content">
+                            <h4>Reach Out on WhatsApp</h4>
+                            <p>+20 101 004 4102</p>
+                        </div>
+                        <div class="ic-action">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="glow-effect"></div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/ali-kassab-8428161b8" target="_blank" class="interact-card interact-card--linkedin">
+                        <div class="ic-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="ic-content">
+                            <h4>Connect Professionally</h4>
+                            <p>Ali Kassab on LinkedIn</p>
+                        </div>
+                        <div class="ic-action"><i class="fas fa-arrow-right"></i></div>
+                        <div class="glow-effect"></div>
+                    </a>
+
+                    <a href="https://calendly.com/" target="_blank" class="interact-card interact-card--calendly">
+                        <div class="ic-icon"><i class="far fa-calendar-check"></i></div>
+                        <div class="ic-content">
+                            <h4>Book a Call</h4>
+                            <p>Let's chat about your project</p>
+                        </div>
+                        <div class="ic-action"><i class="fas fa-arrow-right"></i></div>
+                        <div class="glow-effect"></div>
+                    </a>
+                 </div>
+             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <div class="controls">
-      <div class="control active-btn" data-id="home">
-        <i class="fas fa-home"></i>
-      </div>
-      <div class="control" data-id="about">
-        <i class="fas fa-user"></i>
-      </div>
-      <div class="control" data-id="portfolio">
-        <i class="fas fa-briefcase"></i>
-      </div>
-     
-      <div class="control" data-id="contact">
-        <i class="fas fa-envelope-open"></i>
-      </div>
-    </div>
-    <div class="theme-btn">
+    <!-- NEURAL DOCK NAVIGATION -->
+    <nav id="neural-dock">
+       <div class="blob-indicator"></div>
+       <ul class="nav-links controls">
+            <li class="control active-btn" data-id="home">
+               <i class="fas fa-home"></i> 
+               <span class="dock-text glitch-text" data-text="Home">Home</span>
+            </li>
+            <li class="control" data-id="about">
+               <i class="fas fa-user-astronaut"></i> 
+               <span class="dock-text glitch-text" data-text="About">About</span>
+            </li>
+            <li class="control" data-id="portfolio">
+               <i class="fas fa-code-branch"></i> 
+               <span class="dock-text glitch-text" data-text="Work">Work</span>
+            </li>
+            <li class="control" data-id="contact">
+               <i class="fab fa-whatsapp"></i> 
+               <span class="dock-text glitch-text" data-text="Contact">Contact</span>
+            </li>
+       </ul>
+    </nav>
+    
+    <div class="theme-btn" style="position:fixed; bottom:20px; right:20px; z-index:9999;">
       <i class="fas fa-adjust"></i>
     </div>
     <script src="app.js"></script>

@@ -1,4 +1,4 @@
-.about-container .left-about p{
+.about-intro__copy p {
     padding-left: 0;
 }
 
@@ -50,17 +50,10 @@
         }
     }
 
-    .about-container{
-        grid-template-columns: repeat(1, 1fr);
-        .right-about{
-            grid-template-columns: repeat(1, 1fr);
-            padding-top: 2.5rem;
-        }
-        .left-about{
-            padding-right: 0;
-            p{
-                padding-left: 0;
-            }
+    .about-container {
+        max-width: 100%;
+        .about-intro__facts {
+            justify-content: flex-start;
         }
     }
 
@@ -74,7 +67,7 @@
     }
 
     .about-stats{
-        .progress-bars{
+        .skills-showcase{
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -126,14 +119,18 @@
     }
 
 
-    .main-title{
-        h2{
-            font-size: 2rem;
-            span{
-                font-size: 2.3rem;
+    .main-title {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        h2 {
+            font-size: clamp(1.65rem, 6vw, 2.1rem);
+            span:not(.bg-text) {
+                font-size: inherit;
             }
-            .bg-text{
-                font-size: 2.3rem;
+            .bg-text {
+                font-size: clamp(2rem, 14vw, 2.85rem);
+                white-space: normal;
+                max-width: 95vw;
             }
         }
     }
@@ -164,14 +161,9 @@
         margin-bottom: 6rem;
     }
 
-    .main-title{
-        h2{
-            .bg-text{
-                font-size: 5.5rem;
-            }
-        }
+    .main-title h2 .bg-text {
+        font-size: clamp(2.75rem, 11vw, 4.75rem);
     }
-    
 }
 
 
@@ -200,21 +192,16 @@
 }
 
 @media screen and (max-width:1070px){
-    .about-container{
-        grid-template-columns: repeat(1, 1fr);
-        .right-about{
-            padding-top: 2.5rem;
-        }
+    .about-container {
+        max-width: 100%;
     }
-    .main-title{
-        h2{
-            font-size: 4rem;
-            span{
-                font-size: 4rem;
-            }
-            .bg-text{
-                font-size: 4.5rem;
-            }
+    .main-title h2 {
+        font-size: clamp(2rem, 3.5vw + 1rem, 3rem);
+        span:not(.bg-text) {
+            font-size: inherit;
+        }
+        .bg-text {
+            font-size: clamp(2.4rem, 12vw, 4rem);
         }
     }
 }
@@ -223,8 +210,9 @@
     .container{
         padding: 7rem 6rem;
     }
-    .about-container .left-about{
-        padding-right: 0rem;
+    .about-container {
+        padding-left: 0;
+        padding-right: 0;
     }
     .header-content{
         grid-template-columns: repeat(1, 1fr);
@@ -257,25 +245,19 @@
     .container{
         padding: 7rem 3rem;
     }
-    .about-stats .progress-bars{
+    .about-stats .skills-showcase{
         grid-template-columns: repeat(1, 1fr);
     }
-    .about-container .right-about{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
     .timeline{
         grid-template-columns: repeat(1, 1fr);
     }
-    .main-title{
-        h2{
-            font-size: 3rem;
-            span{
-                font-size: 3rem;
-            }
-            .bg-text{
-                font-size: 4rem;
-            }
+    .main-title h2 {
+        font-size: clamp(1.75rem, 6vw, 2.65rem);
+        span:not(.bg-text) {
+            font-size: inherit;
+        }
+        .bg-text {
+            font-size: clamp(2.1rem, 18vw, 3.25rem);
         }
     }
 }
