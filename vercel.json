@@ -1,7 +1,13 @@
 {
-  "functions": {
-    "api/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "version": 2,
+  "public": true,
+  "name": "portfolio",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1" }
+  ],
+  "cleanUrls": true,
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": null,
+  "outputDirectory": "."
 }
