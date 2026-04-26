@@ -25,14 +25,11 @@
         const nextActiveSec = document.getElementById(id);
         if (nextActiveSec) nextActiveSec.classList.add("active");
 
-        // Update Neural Dock Blob Indicator
-        const dock = document.getElementById("neural-dock");
-        const blob = document.querySelector(".blob-indicator");
-        if (dock && blob && button) {
-            const dockRect = dock.getBoundingClientRect();
-            const btnRect = button.getBoundingClientRect();
-            const offsetLeft = btnRect.left - dockRect.left + (btnRect.width / 2);
-            blob.style.left = `${offsetLeft}px`;
+        // Update Horizontal Navigation Active State
+        const horizontalNav = document.getElementById("horizontal-nav");
+        if (horizontalNav && button) {
+            // The active state is handled by CSS classes, no need for blob indicator
+            // The active-btn class is already applied above
         }
 
         // Ensure scroll resets when jumping between sections
