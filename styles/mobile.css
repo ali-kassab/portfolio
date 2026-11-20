@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Phone and small-tablet refinements for the existing design.
+   Loaded last; desktop styles are untouched (everything is inside media
+   queries). Keeps the same colors, fonts and components.
+   ========================================================================== */
+
+/* ---------- Tablets and phones (<= 900px) ---------- */
+@media screen and (max-width: 900px) {
+  /* The hero orbit was scaled with transform, which kept its full 450px
+     footprint and left a large empty gap. Size it for real instead. */
+  .cyber-home {
+    min-height: auto;
+    padding-top: 1rem;
+    gap: 1.5rem;
+  }
+
+  .vortex-container {
+    width: 320px;
+    height: 320px;
+    transform: none;
+  }
+
+  .hexagon-profile-wrap {
+    width: 210px;
+    height: 210px;
+  }
+
+  .tech-orb {
+    width: 42px;
+    height: 42px;
+    margin: -21px;
+    font-size: 1.4rem;
+    transform: rotate(var(--angle)) translateY(-150px) rotate(calc(-1 * var(--angle)));
+  }
+
+  .tech-orb:hover {
+    transform: rotate(var(--angle)) translateY(-150px) rotate(calc(-1 * var(--angle))) scale(1.3);
+  }
+
+  .cyber-text-box {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .cyber-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Contact: let columns shrink instead of pushing the page wider. */
+  .modern-contact-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .contact-left-col,
+  .contact-right-col {
+    min-width: 0;
+  }
+
+  .contact-subhead {
+    max-width: 100%;
+  }
+
+  .interact-card {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .ic-content p {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ---------- Phones (<= 600px) ---------- */
+@media screen and (max-width: 600px) {
+  /* Top navigation: fit all four links on one line, no clipping. */
+  #horizontal-nav {
+    height: auto;
+    padding: 6px 0;
+  }
+
+  #horizontal-nav .nav-container {
+    max-width: 100%;
+    height: 48px;
+    padding: 0 0.5rem;
+  }
+
+  #horizontal-nav .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  #horizontal-nav .nav-links .control {
+    padding: 0.6rem 0.4rem;
+  }
+
+  #horizontal-nav .nav-links .control .nav-text {
+    font-size: 0.78rem;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+
+  /* Theme toggle: move from the top-right (where it covered the nav)
+     to the bottom-right corner, thumb-reachable. */
+  .theme-btn {
+    top: auto !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Sections: clear the fixed nav, use a 16px side gutter. */
+  .container,
+  header.container {
+    padding: 76px 1rem 5rem !important;
+  }
+
+  /* Hero */
+  .vortex-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hexagon-profile-wrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .tech-orb {
+    width: 38px;
+    height: 38px;
+    margin: -19px;
+    font-size: 1.2rem;
+    transform: rotate(var(--angle)) translateY(-128px) rotate(calc(-1 * var(--angle)));
+  }
+
+  .tech-orb:hover {
+    transform: rotate(var(--angle)) translateY(-128px) rotate(calc(-1 * var(--angle))) scale(1.25);
+  }
+
+  .bg-typed-code {
+    font-size: 0.85rem;
+    width: 90%;
+    right: 5%;
+  }
+
+  .neon-badge {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+  }
+
+  .shimmer-name {
+    font-size: clamp(2.4rem, 12vw, 3.2rem);
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .neon-title {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .cyber-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 1.5rem auto 0;
+  }
+
+  /* The spinning fill is twice the button width; on a full-width button its
+     corners sweep into view and cover the label. Keep it still (hidden)
+     until the button is pressed. */
+  .liquid-wave {
+    animation: none;
+  }
+
+  .liquid-btn,
+  .cyber-ghost-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Section titles */
+  .main-title h2 {
+    letter-spacing: 1px;
+  }
+
+  /* Contact */
+  .modern-contact-wrapper {
+    padding-top: 2rem;
+    gap: 2rem;
+  }
+
+  .contact-headline {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+  }
+
+  .contact-personal-chips {
+    gap: 0.6rem;
+  }
+
+  .info-chip {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .interact-cards-container {
+    gap: 1rem;
+  }
+
+  .interact-card {
+    gap: 0.9rem;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .ic-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    border-radius: 12px;
+  }
+
+  .ic-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .ic-content p {
+    font-size: 0.85rem;
+  }
+
+  .ic-action {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* ---------- Very small phones (<= 360px) ---------- */
+@media screen and (max-width: 360px) {
+  #horizontal-nav .nav-links .control .nav-text {
+    font-size: 0.72rem;
+  }
+
+  .vortex-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hexagon-profile-wrap {
+    width: 160px;
+    height: 160px;
+  }
+
+  .tech-orb {
+    transform: rotate(var(--angle)) translateY(-112px) rotate(calc(-1 * var(--angle)));
+  }
+}
